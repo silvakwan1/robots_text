@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.content{
+    overflow: hidden;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.687);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 30px;
+}
+.content-text{
+    margin-left: auto;
+    width: 300px;
+    height: 150px;
+    background: white;
+    border-radius: 30px;
+    position: relative;
+}
+.content-text::after{
+    content: "";
+    display: block;
+    height: 60px;
+    width: 20px;
+    border-radius:  0 0 0 500px;
+    transform: rotate(30deg);
+    background: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -50px;
+    left: 70px;
+}
+.content-robot{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+.head-robot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+    height: 130px;
+    border-radius: 100%;
+    border: #fff 14px solid;
+    background: rgba(0, 0, 0, 0.429);
+}
+
+.left-eye, .right-eye{
+    background: rgba(172, 255, 47, 0.84);
+    width: 50px;
+    height: 20px;
+    border-radius: 100%;
+}
+.left-eye{
+    transform: rotate(20deg);
+}
+.right-eye{
+    transform: rotate(-20deg);
+}
+
+.main-robot{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    background: #fff;
+    border-radius: 50px 50px 100% 100%;    
+}
+.left-arm, .right-arm{
+    height: 200px;
+    width: 50px;
+    background:#fff;
+    border-radius: 100%;
+    position: absolute;   
+    z-index: 2;
+}
+.left-arm{
+    top: -16px;
+    left: -60px;
+    transform: rotate(35deg);
+}
+.main-robot .right-arm{
+    height: 50px;
+    width: 200px;
+    top: -3px;
+    right: -160px;
+    transform-origin: left bottom;
+    animation:  movie 5s reverse infinite ;
+}
+@keyframes movie{
+    to{
+        
+        transform: rotate(0deg);
+    }
+    from{
+        
+        transform: rotate(-25deg);
+    }
+}
