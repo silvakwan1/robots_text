@@ -9,19 +9,24 @@
 }
 
 .content{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". . text text text "
+                         ". robot robot . .";
     overflow: hidden;
     height: 100vh;
     background: rgba(0, 0, 0, 0.687);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
+    row-gap: 100px;
     padding: 30px;
 }
 .content-text{
-    margin-left: auto;
-    width: 300px;
+    grid-area: text;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
     height: 150px;
+    padding: 10px 20px;
     background: white;
     border-radius: 30px;
     position: relative;
@@ -29,16 +34,18 @@
 .content-text::after{
     content: "";
     display: block;
-    height: 60px;
+    height: 85px;
     width: 20px;
-    border-radius:  0 0 0 500px;
-    transform: rotate(30deg);
+    border-radius:  0 0 0 100%;
+    transform-origin: left bottom;
+    transform: rotate(40deg);
     background: rgb(255, 255, 255);
     position: absolute;
     bottom: -50px;
     left: 70px;
 }
 .content-robot{
+    grid-area: robot;
     display: flex;
     flex-direction: column; 
     align-items: center;
