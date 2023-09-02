@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     color: black;
-    text-align: center;
-    line-height: 50px;
-    font-size: 50px;
 }
 
 .content{
@@ -13,7 +10,7 @@
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: ". . text text text "
-                         ". robot robot . .";
+                        ". robot robot btn .";
     overflow: hidden;
     height: 100vh;
     background: rgba(0, 0, 0, 0.687);
@@ -43,6 +40,20 @@
     position: absolute;
     bottom: -50px;
     left: 70px;
+}
+.btn{
+    grid-area: btn;
+    justify-self: end;
+}
+.btn #btn{
+    padding: 10px 15px;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    border: #fff 1px solid;
+    border-radius: 50px;
+    box-shadow: 4px 7.5px 5px grey;
+
 }
 .content-robot{
     grid-area: robot;
@@ -81,12 +92,12 @@
     height: 300px;
     width: 200px;
     background: #fff;
-    border-radius: 50px 50px 100% 100%;    
+    border-radius: 50px 0px 100% 100%;    
 }
 .left-arm, .right-arm{
     height: 200px;
     width: 50px;
-    background:#fff;
+    background:#fffdfd;
     border-radius: 100%;
     position: absolute;   
     z-index: 2;
@@ -97,10 +108,11 @@
     transform: rotate(35deg);
 }
 .main-robot .right-arm{
+    border-radius: 40px 100% 100% 0;
     height: 50px;
     width: 200px;
-    top: -3px;
-    right: -160px;
+    top: 0px;
+    right: -180px;
     transform-origin: left bottom;
     animation:  movie 5s reverse infinite ;
 }
