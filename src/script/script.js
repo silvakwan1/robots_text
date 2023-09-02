@@ -9,13 +9,12 @@ console.log(mensagemObj)
 
 function control(){
     contador++;
-    if(mensagemObj[contador] == undefined){
+    let mensagen = mensagemObj[contador]
+    if(mensagen == undefined){
         reload()
     };
-    text.innerHTML = mensagemObj[contador];
+    text.textContent = mensagen;
 }
-
-
 function reload(){
-    return  document.location.reload()
+    document.location.reload()
 }

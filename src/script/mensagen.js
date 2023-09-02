@@ -1,8 +1,8 @@
 const mensagemObj = {
-    "1": "Olá,!",
-    "2": "Olá vindo!",
-    "3": "Olá, seja vindo!",
-    "4": "Olá, bem vindo!",
-    "5": "opa dt"
+    1: "meu nome e kauan!",
+    2: "fiz esse robor com js e cs",
+    3: "demorei 3hrs",
+    4: "fyuku",
+    5: "opa dt"
 };
 export default mensagemObj;
