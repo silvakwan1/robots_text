@@ -9,11 +9,11 @@ console.log(mensagemObj)
 
 function control(){
     contador++;
-    let mensagen = mensagemObj[contador]
-    if(mensagen == undefined){
+    let mensagem = mensagemObj[contador]
+    if(mensagem == undefined){
         reload()
     };
-    text.textContent = mensagen;
+    text.textContent = mensagem;
 }
 function reload(){
     document.location.reload()

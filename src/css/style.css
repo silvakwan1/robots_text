@@ -1,8 +1,10 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500&display=swap');
+
+*{  
+    font-family: 'Roboto', monospace, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
 }
 
 .content{
@@ -19,11 +21,15 @@
 }
 .content-text{
     grid-area: text;
+    display: grid;
+    place-items: center;
     margin: auto;
     width: 100%;
-    max-width: 600px;
-    height: 150px;
-    padding: 10px 20px;
+    max-width: 450px;
+    height: auto;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 20px 20px;
     background: white;
     border-radius: 30px;
     position: relative;
@@ -41,11 +47,17 @@
     bottom: -50px;
     left: 70px;
 }
+.text{
+    font-size: 35px;
+    text-align: center;
+
+}
 .btn{
     grid-area: btn;
     justify-self: end;
 }
 .btn #btn{
+    cursor: pointer;
     padding: 10px 15px;
     background: transparent;
     color: #fff;
@@ -54,6 +66,10 @@
     border-radius: 50px;
     box-shadow: 4px 7.5px 5px grey;
 
+}
+.btn #btn:hover{
+    transition: .5s;
+    background:rgba(0, 0, 0, 0.429);
 }
 .content-robot{
     grid-area: robot;
@@ -88,19 +104,19 @@
 }
 
 .main-robot{
+    z-index: 2;
     position: relative;
     height: 300px;
     width: 200px;
-    background: #fff;
-    border-radius: 50px 0px 100% 100%;    
+    background: linear-gradient(white,  rgb(171, 169, 169), grey);
+    border-radius: 50px 50px 100% 100%;    
 }
 .left-arm, .right-arm{
     height: 200px;
     width: 50px;
-    background:#fffdfd;
+    background: linear-gradient(white, grey);
     border-radius: 100%;
     position: absolute;   
-    z-index: 2;
 }
 .left-arm{
     top: -16px;
@@ -108,21 +124,16 @@
     transform: rotate(35deg);
 }
 .main-robot .right-arm{
-    border-radius: 40px 100% 100% 0;
-    height: 50px;
-    width: 200px;
-    top: 0px;
-    right: -180px;
-    transform-origin: left bottom;
-    animation:  movie 5s reverse infinite ;
+    top: -16px;
+    right: -60px;
+    transform: rotate(-35deg);
 }
-@keyframes movie{
-    to{
-        
-        transform: rotate(0deg);
-    }
-    from{
-        
-        transform: rotate(-25deg);
-    }
+.shadow{
+    margin-top: 30px;
+    height: 50px;
+    width: 150px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 20%;
+    transform: rotateX(40deg);
 }

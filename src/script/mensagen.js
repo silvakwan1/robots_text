@@ -1,8 +1,6 @@
 const mensagemObj = {
-    1: "meu nome e kauan!",
-    2: "fiz esse robor com js e cs",
-    3: "demorei 3hrs",
-    4: "fyuku",
-    5: "opa dt"
+    1: "fui criado pelo kawan",
+    2: "Ele demorou 1 dias pra fazer essa porra",
+    3: "Eo pix, nada ainda?"
 };
 export default mensagemObj;
